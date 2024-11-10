@@ -1,0 +1,390 @@
+/* Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu li {
+  position: relative; /* Untuk dropdown positioning */
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #93c5fd;
+}
+
+/* Header Section */
+.main-header {
+  text-align: center;
+  padding: 8rem 2rem 2rem;
+  background-color: #e5e7eb;
+  margin-bottom: 20px; /* Add margin to create space below the header */
+}
+
+.main-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.main-header p {
+  color: #4b5563;
+  font-size: 1.2rem;
+}
+
+/* Modules Section */
+.modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background-color: white;
+  padding: 15px; /* Menghapus padding agar gambar bisa mengisi penuh */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Menyembunyikan bagian gambar yang lebih besar dari kartu */
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.module-image {
+  width: 25%; /* Mengatur lebar gambar 100% dari kartu */
+  height: auto; /* Mengatur tinggi otomatis untuk mempertahankan rasio aspek */
+  object-fit: cover; /* Memastikan gambar memenuhi area kartu */
+}
+
+.module-card h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin: 0.5rem 0; /* Menambahkan margin untuk jarak */
+}
+
+.module-card p {
+  color: #4b5563;
+  font-size: 1rem;
+  margin: 0.5rem 0; /* Menambahkan margin untuk jarak */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modules {
+    grid-template-columns: 1fr;
+  }
+}
+/* Footer */
+.footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+  color: #93c5fd;
+}
+/* Module Button */
+.module-button {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.module-button:hover {
+  background-color: #1d4ed8;
+}
+.container {
+  width: 1310px; /* or any desired width */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 80px 0 0 20px; /* Adjust the top margin to create space below the navbar */
+  margin-bottom: 50px;
+}
+.profile {
+  text-align: center;
+  margin-right: 20px;
+}
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.profile h2 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+.profile p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #888;
+}
+.profile .nisn {
+  font-size: 14px;
+  color: #000;
+}
+.score-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1;
+  align-items: center;
+  margin-right: 20px;
+}
+.score-card .score {
+  font-size: 24px;
+  font-weight: bold;
+}
+.score-card .attendance {
+  font-size: 14px;
+  color: #888;
+}
+.score-card .overall-score {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+/* Existing CSS remains unchanged */
+
+/* Adjusting the menu to accommodate more items */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.menu .menu-item {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Tambahkan transisi */
+}
+
+.menu .menu-item:hover {
+  background-color: #e2e8f0; /* Ganti warna latar belakang saat hover */
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.menu .menu-item i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.menu .menu-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+}
+/* Modules Container Styles */
+.modules-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.module {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.module h4 {
+  margin-top: 0;
+}
+
+.module p {
+  margin-bottom: 20px;
+}
+.modules-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modules-container input {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: calc(100% - 22px);
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.modules-container select {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.modules-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders are combined */
+  margin-top: 10px;
+}
+
+.modules-table th,
+.modules-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd; /* Adds border to table cells */
+}
+
+.modules-table thead {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.modules-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row colors */
+}
+
+.modules-table tbody tr:hover {
+  background-color: #e2e8f0; /* Light gray on hover */
+}
+
+.modules-table td {
+  color: #333;
+}
+
+.modules-table th {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Specific styling for module number */
+.modules-table td.module-number {
+  font-size: 0.9rem; /* Smaller font size */
+  padding: 8px 10px; /* Adjust padding */
+  color: #555; /* Slightly lighter color */
+}
+
+/* Optional: Add a bottom border to the header */
+.modules-table thead th {
+  border-bottom: 2px solid #fff; /* Thicker border for header */
+}
+
+/* Optional: Add a top border to the first row of the body */
+.modules-table tbody tr:first-child {
+  border-top: 2px solid #ddd; /* Thicker border for the first body row */
+}
+.module-button {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 45px;
+  margin-bottom: 10px;
+}
+
+.module-button:hover {
+  background-color: #2e4053;
+}
+
+.module-button i {
+  margin-right: 5px;
+}
+/* Kustomisasi Scrollbar untuk Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna latar belakang track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a; /* Warna thumb scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e4053; /* Warna thumb scrollbar saat hover */
+}

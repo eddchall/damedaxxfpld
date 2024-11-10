@@ -1,0 +1,184 @@
+/* Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu li {
+  position: relative; /* Untuk dropdown positioning */
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #93c5fd;
+}
+
+/* Header Section */
+.main-header {
+  text-align: center;
+  padding: 5rem 2rem 2rem;
+  background-color: #e5e7eb;
+}
+
+.main-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.main-header p {
+  color: #4b5563;
+  font-size: 1.2rem;
+}
+
+/* Modules Section */
+.modules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background-color: white;
+  padding: 15px; /* Menghapus padding agar gambar bisa mengisi penuh */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Menyembunyikan bagian gambar yang lebih besar dari kartu */
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.module-image {
+  width: 25%; /* Mengatur lebar gambar 100% dari kartu */
+  height: auto; /* Mengatur tinggi otomatis untuk mempertahankan rasio aspek */
+  object-fit: cover; /* Memastikan gambar memenuhi area kartu */
+}
+
+.module-card h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin: 0.5rem 0; /* Menambahkan margin untuk jarak */
+}
+
+.module-card p {
+  color: #4b5563;
+  font-size: 1rem;
+  margin: 0.5rem 0; /* Menambahkan margin untuk jarak */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modules {
+    grid-template-columns: 1fr;
+  }
+}
+/* Footer */
+.footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+  color: #93c5fd;
+}
+/* Module Button */
+.module-button {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.module-button:hover {
+  background-color: #1d4ed8;
+}
+/* Kustomisasi Scrollbar untuk Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna latar belakang track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a; /* Warna thumb scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e4053; /* Warna thumb scrollbar saat hover */
+}
